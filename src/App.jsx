@@ -9,18 +9,24 @@ function App() {
   useEffect(() => { handleCLick() }, []);
 
   const handleCLick = async () => {
-    setLoading(true);
-    let response = await fetch('https://api.b7web.com.br/cinema/');
-    let json = await response.json();
-    setLoading(false);
-    setMovies(json);
+    try {
+      setLoading(true);
+      let response = await fetch('https://api.b7web.com.br/cinema/');
+      let json = await response.json();
+      setLoading(false);
+      setMovies(json);
+    } catch (error) {
+      setLoading(false);
+      alert('Erro! Tente novamente', error);
+      console.error(error)
+    }
   }
 
   return (
     <div className={style.main}>
       {loading && <Loading />}
 
-      {!loading &&
+      {!loading && movies.length > 0 &&
         <>
           <div className={style.header}>
             <h1>Filmes em cartaz</h1>
@@ -43,6 +49,9 @@ function App() {
 
           </div>
         </>
+      }
+      {!loading && movies.length === 0 &&
+        <Loading />
       }
     </div>
   );
