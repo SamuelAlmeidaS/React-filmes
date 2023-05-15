@@ -1,0 +1,35 @@
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #FF0000;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.width {
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #c0c0c0;
+    cursor: pointer;
+}
