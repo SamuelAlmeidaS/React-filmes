@@ -14,6 +14,9 @@ function App() {
 
   return (
     <div className={style.main}>
+      <div className={style.header}>
+          <h1>Filmes em cartaz</h1>
+      </div>
 
       {/* <button classNmae={style.button} onClick={handleCLick}>Click aqui</button>
       Total de filmes: {movies.length} */}
