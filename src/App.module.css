@@ -1,6 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .main {
     display: flex;
     flex-direction: column;
+    padding: 10px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    height: 70px;
+    background-color: #FF0000;
+    color:#FFF;
+    margin-bottom:50px;
 }
 
 .grid {
@@ -26,6 +42,7 @@
 
 .width {
     width: 100%;
+    padding: 10px;
 }
 
 button {
